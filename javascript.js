@@ -31,3 +31,16 @@ function goToTwitter(){
 function goToMail(){
   window.location.href = "mailto:info.lakshmigopi@gmail.com";
 }
+
+function goToAbout(){
+  document.getElementById("About")
+  .scrollIntoView({behavior:'smooth'});
+}
+function goToSkill(){
+   document.getElementById("myskills")
+  .scrollIntoView({behavior:'smooth'});
+}
+function goToForm(){
+   document.getElementById("form")
+  .scrollIntoView({behavior:'smooth'});
+}

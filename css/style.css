@@ -7,62 +7,139 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+
+  
 }
 body {
   /* background-color: rgb(9, 9, 31); */
   font-family: "oxygen";
   margin: 0;
   padding: 0;
+overflow-y:scroll;
+ width: 100vw; 
+ 
  
 }
 .homesection {
+ 
   height: 100vh;
   width: 100vw;
   position: relative;
   z-index: 0;
 }
+   
+
 #particles-js {
-  height: 100vh;
-  width: 88vw;
-  background-size: cover;
+  height: 97%;
+  width:97%;
+  max-width: 97%;
+  background-size: contain;
   background-position: center;
   position: absolute;
   z-index: 1;
 }
 
+.home-content{
+  width: 98%;
+  height: 100%;
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+}
 
+/* .sign{
+  width:40%;
+  height: 30%;
+  } */
 
+.intro {
+
+  text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 2rem;
+  line-height: 3.5rem;
+}
 
 .nav-container {
+ width: 99%;
   max-height: 5vh;
   display: flex;
   justify-content: center;
 }
 
-.contact,
 .navbar {
+  
   position: absolute;
   z-index: 3;
 }
 .navbar {
   max-height: 5vh;
-  transition: ease;
+  
+}
+
+.nav-link{
+  text-decoration: none;
+  color: black;
+  opacity: 0.8;
 }
 .nav-link:hover {
   text-decoration: none;
-
-  transform: translate(0px, 5px);
+  opacity: 1;
+}
+.svg-down1{
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  left: 95vw;
+  top: 90vh;
 }
 
-/* .intro-container {
-  text-align: center;
-  height: 15vh;
-} */
-.intro {
-  margin-top: 10%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  font-size: 4vw;
+
+@media screen and (max-width:991px) {
+ .navbar{
+    position: absolute;
+    right:.8rem;
+    top: 0;
+  }
+  
+}
+@media screen and (max-width:600px){
+  .navbar{
+    clear: both;
+  }
+  .svg-down1{
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  left: 45vw;
+  top: 90vh;
+}
+
+}
+
+@media screen and (max-width:200px) {
+    .navbar{
+    clear: both;
+  }
+ .intro {
+   font-size:1.5rem ;
+   line-height: 2.5rem;
+ }
+ .navbar{
+   line-height: 1rem;
+ }
+ .svg-down1{
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  left: 45vw;
+  top: 90vh;
+}
 }
 
 .parallax {
@@ -74,40 +151,67 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
+
 .about {
   height: 100vh;
   width: 100vw;
   background-color: rgb(255, 193, 7);
+ /* margin: auto auto; */
+  
 }
-.about.icon {
-  width: 2vw;
-  height: 10vh;
-  position: relative;
-  top: 95vh;
-  left: 5vw;
-}
-.about-col {
-  margin-top: 10%;
+.about-content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  
+  }
 
+.about-col-left{
+  width: 25%;
+  height: 28rem;
+ 
+ display: flex;
+ flex-direction: column;
+ justify-content: space-evenly;
+ align-items: center;
+ 
 }
-.about-col h1 {
-  margin-left: 15%;
-  padding-bottom: 55px;
-  text-align: center;
+
+.about-col-left h1 {
+ line-height: 4rem;
   font-family: cursive;
+  font-size: 4rem;
+}
+
+.about-smal-head{
+display: none;
 }
 .card {
+ max-width: 35rem;
   background-color: black;
   color: #e6b800;
   border: 4px solid #e6b800;
   border-radius: 2rem;
   box-shadow: yellow;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  
 }
 
 .card-header {
-  padding-bottom: 2px;
+  
   border-bottom: 1px solid #e6b800;
+  font-size: 4rem;
 }
+.card-text {
+  font-size: 1rem;
+}
+
+
 #svgupabout{
   position: absolute;
 top:240vh;
@@ -124,9 +228,8 @@ animation-iteration-count:infinite;
 }
 .arrow-up-svg{
 position: absolute;
-top:240vh;
+top:152vh;
 left: 95vw;
-
 
 }
 @keyframes slideup{
@@ -140,15 +243,161 @@ left: 95vw;
    top: 145vh;
   }
 }
-.arrow-up-svg-skill{
+
+.svg-down2{
+width: 3rem;
+height: 2rem;
 position: absolute;
-top:390vh;
+top: 240vh;
 left: 95vw;
+}
+@media screen and (max-width:600px) {
+  .about-content{
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    
+  }
+.about-col-left{
+  width: 90%;
+  height: max-content;
+ 
+}
+ .about-col-left h1{
+display: none;
+ }
+.about-smal-head{
+  display: block;
+  text-align: center;
+  font-family: cursive;
+font-size: 3rem;
+background-color: black;
+color:#e6b800 ;
+}
+
+ .card {
+  max-width: 25rem; 
+}
+.card-header {
+  
+    font-size: 3rem;
+}
+.card-text {
+  word-wrap: break-word;
+  font-size: 1rem;
 
 }
+.arrow-up-svg-l{
+  display: none;
+}
+.arrow-up-svg{
+position: absolute;
+top:152vh;
+left:45vw;
+}
+.svg-down2{
+width: 3rem;
+height: 2rem;
+position: absolute;
+top: 240vh;
+left: 45vw;
+}
+   
+}
+
+@media screen and (max-width:318px){
+  .about-content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .about-smal-head{
+ 
+font-size: 2rem;
+
+}
+
+ .card {
+   width: 95%;
+  max-width: 15rem; 
+ max-height: 35rem;
+}
+.card-header {
+  margin: 0;
+    font-size: 1.5rem;
+}
+.card-text {
+  margin-top: 0;
+  
+  font-size: 0.9rem;
+
+}
+}
+
+@media screen and (max-width:200px){
+  .about-content{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  .about-smal-head{
+ 
+font-size: 2rem;
+
+}
+
+ .card {
+   width: 95%;
+  max-width: 15rem; 
+ max-height: 35rem;
+}
+.card-header {
+  margin: 0;
+    font-size: 1rem;
+}
+.card-text {
+  margin-top: 0;
+  
+  font-size: 0.7rem;
+
+}
+.arrow-up-svg{
+position: absolute;
+top:152vh;
+left:35vw;
+}
+.svg-down2{
+width: 3rem;
+height: 2rem;
+position: absolute;
+top: 240vh;
+left: 35vw;
+}
+}
+
+
+
+.arrow-up-svg-skill{
+position: absolute;
+top:304vh;
+left: 93vw;
+
+}
+.svg-down3{
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  top: 394vh;
+left:93vw ;
+}
+
 .arrow-up-svg-form{
 position: absolute;
-top:540vh;
+top:452vh;
 left: 95vw;
 
 }
@@ -181,62 +430,71 @@ animation-iteration-count: infinite;
   width: 100vw;
   height: 100vh;
   background-color: rgb(255, 193, 7);
+    
 }
-
-.card {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+.skill-content{
+  width: 97%;
+  height: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.card-header{
-font-size: 7vw;
-}
-/* .card-head {
+.column1{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   
-   animation-duration: 5s;
-    animation-name: slidein;
-    animation-iteration-count: infinite;
-
-}
-@keyframes slidein {
-  0% {
-    margin-right:10px;
-  }
  
-  100% {
-   margin-right:1px;
+}
+.column2{
+  width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
   }
-} */
-.card-text {
-  font-size: 1.5vw;
+
+.card-skill{
+  max-height: 65rem;
+  width: 80%;
+  
+ 
 }
 
-.skills {
-  padding-top: 10%;
-  line-height: 28px;
+
+.card-skill-head{
+ line-height: 3rem;
+ font-size: 3rem;
+text-align: center;
 }
-.skills article {
-  margin-left: 10%;
+.card-skill-text{
+  
+  text-align: left;
+  line-height: 1.5rem;
+  font-size: 1rem;
 }
 
-.skills article h1 {
-  font-size: 10vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
 
-.skills article p {
-  margin-top: 8%;
-  font-size: 2.75vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-}
 .skillimg {
   /* width: 40vw;
   height: 60vh; */
-  margin-left: 25%;
+  max-width: 30vw;
+  width: 80%;
+  margin-top: 5%;
+  margin-left:auto;
+  margin-right: auto;
   animation-duration: 5s;
   animation-name: shake;
   animation-iteration-count: infinite;
+}
+.progress{
+  margin-left: 1em;
+  font-size: 0.5rem;
 }
 @keyframes shake{
    0% {
@@ -249,9 +507,10 @@ font-size: 7vw;
  
   }
 }
-.progress.row {
-  margin-left: 15%;
-}
+/* .progress.row {
+  /* margin-left: 15%;
+  margin-top: 15%; 
+} */
 .progress-sub-row.progress div {
   justify-content: center;
 }
@@ -310,7 +569,7 @@ font-size: 7vw;
   }
  
   100% {
-     width: 50%;
+     width: 70%;
   }
 }
 @keyframes slidein4{
@@ -319,51 +578,270 @@ font-size: 7vw;
   }
  
   100% {
-     width: 25%;
+     width: 45%;
   }
 }
+
+@media screen and (max-width:600px) {
+
+  .column1{
+  width: 40%;
+  
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+ 
+}
+.column2{
+  width:58%;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+ 
+  }
+
+.card-skill{
+  max-height: 65rem;
+ width: 100%;
+ 
+
+   }
+  .card-skill-head{
+ line-height: 2.5rem;
+ font-size: 1.75rem;
+ 
+
+}
+.card-skill-text{
+  margin-top: 0;
+  text-align: left;
+  line-height: 1rem;
+  font-size: .9rem;
+}
+.arrow-up-svg-skill{
+position: absolute;
+top:304vh;
+left: 90vw;
+
+}
+.svg-down3{
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  top: 394vh;
+left:90vw ;
+}
+
+.skillimg {
+  /* width: 40vw;
+  height: 60vh; */
+  max-width: 30vw;
+  width: 80%;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  animation-duration: 5s;
+  animation-name: shake;
+  animation-iteration-count: infinite;
+}
+}
+@media screen and (max-width:358px) {
+  .skill-content{
+  width: 97%;
+  height: 100%;
+ 
+  display: flex;
+  flex-direction:row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.column1{
+  margin-top: 6rem;
+  width: 100%;
+  height: 40%;
+  background-color: coral;
+  display: flex;
+  /* justify-content: center; */
+  align-items: center;
+  
+ 
+}
+.column2{
+ 
+  width:100%;
+  height: 34%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+ 
+ 
+  }
+
+.card-skill{
+  max-height: 65rem;
+ width: 96%;
+   }
+  .card-skill-head{
+ line-height: 2rem;
+ font-size: 2rem;
+
+}
+.card-skill-text{
+  
+  text-align: left;
+  line-height: 1.5rem;
+  font-size: .9rem;
+}
+
+.skillimg{
+  display: none;
+}
+.arrow-up-svg-skill{
+position: absolute;
+top:304vh;
+left: 85vw;
+
+}
+.svg-down3{
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  top: 394vh;
+left:85vw ;
+}
+}
+@media screen and (max-width:238px){
+   .card-skill-head{
+ line-height: 2rem;
+ font-size: 1.5rem;
+
+}
+.card-skill-text{
+  
+  text-align: left;
+  line-height: 1rem;
+  font-size: .6rem;
+}
+.arrow-up-svg-skill{
+position: absolute;
+top:302vh;
+left: 76vw;
+
+}
+.svg-down3{
+  width: 3rem;
+  height: 2rem;
+  position: absolute;
+  top: 394vh;
+left:76vw ;
+}
+}
+
+
 .form {
   height: 100vh;
   width: 100vw;
   margin: 0;
   background-color: rgb(255, 193, 7);
-}
-
-.form-body {
-  margin-top: 8%;
-  margin-left: 31%;
-  width: 40vw;
-  height: 70vh;
-  background-color: black;
-  display: inline-block;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
+
+.form-body {
+  margin: auto;
+  width: 65%;
+  height: 70%;
+  background-color: black;
+  max-width: 50vw;
+ 
+}
+.form-content{
+  width: 100%;
+  height: 100%;
+ display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items:center;
+}
 .form-body h1 {
-  margin-top: 5%;
+  margin-top: 1em;
+  font-size: 2rem;
   color: #e6b800;
   text-align: center;
+  margin-bottom: 1em;
 }
 .form-body input {
   width: 80%;
-  margin-top: 6%;
-  margin-left: 10%;
+  height: 2rem;
+  margin-bottom: 1em;
+  /* margin-top: 1.5rem;
+  margin-left: 10%; */
   background-color: #c9b257;
   color: black;
+  font-size: 0.75rem;
 }
 .submitbtn {
-  margin-top: 4%;
-  margin-left: 45%;
+  /* margin-top: 15%;
+  margin-left: 30%; */
+  align-items: center;
   background-color: #e6b800;
   color: black;
+  font-size: 1rem;
 }
 
-.reverse-arrow-up-svg{
-  position: absolute;
-top:240vh;
-left: 5vw;
+@media screen and (max-width:280px) {
+  .form-body h1 {
+    font-size: 1.75rem;
+  }
+.form-body input {
+    height: 2rem;
+  margin-bottom: 1em;
+    
+}
+
+.arrow-up-svg-form{
+position: absolute;
+top:442vh;
+left: 80vw;
 
 }
+}
+@media screen and (max-width:180px) {
+  .form-body {
+  margin: auto;
+  width: 85%;
+  height: 70%;
+  background-color: black;
+ 
+}
+  .form-body h1 {
+    font-size: 1rem;
+  }
+.form-body input {
+    height: 2rem;
+  margin-bottom: 2em;
+    
+}
+
+.arrow-up-svg-form{
+position: absolute;
+top:442vh;
+left: 80vw;
+
+}
+.arrow-up-svg-form-ani{
+display: none;
+
+}
+}
+
+
+
 .footer{
   background-color: black;
   width: 100vw;
@@ -390,10 +868,3 @@ left: 5vw;
   align-items: center;
 }
 
-@media only screen and (max-width: 575px) {
-  .contact {
-    margin-top: 10vh;
-    margin-left: 35vw;
-    font-size: 1.5vh;
-  }
-}
